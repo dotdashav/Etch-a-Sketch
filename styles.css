@@ -1,0 +1,65 @@
+body {
+    background: #424874;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Verdana';
+    font-size: 100px;
+    text-align: center;
+    color: #f3d34a;
+}
+.options{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+    padding: 20px;
+}
+
+button {
+    height: auto;
+    width: fit-content;
+    padding: 10px;
+    background:  #2a7f62;
+    color: #f3d34a;
+    font-weight: bold;
+}
+
+.container {
+    background: red;
+    height: 640px;
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.squareEight {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+}
+.squareSixteen{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.squareThirtytwo {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+}
+.squareSixtyfour {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+}
+.black {
+    background: black;
+}
+.footer {
+    margin-bottom: 0;
+}
