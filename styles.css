@@ -58,8 +58,27 @@ button {
     height: 10px;
 }
 .black {
-    background: black;
+    background: #000000
 }
+.color1 {
+    background: #9b5de5
+}
+.color2 {
+    background: #F15BB5;
+}
+
+.color3 {
+    background: #FEE440;
+}
+
+.color4 {
+    background: #00BBF9;
+}
+
+.color5 {
+    background: #00F5D4 ;
+}
+
 .footer {
     margin-bottom: 0;
 }

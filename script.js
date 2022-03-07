@@ -10,6 +10,9 @@ let quantityNumber= 8
 let totalSquares= quantityNumber * quantityNumber
 let divCreated
 let allDivs 
+let classStyles = ['black', 'color1', 'color2','color3', 'color4','color5']
+let classDefault = classStyles[0]; 
+
 function createDiv (){
     let newDiv = document.createElement('div');
     newDiv.classList.add ('square'+quantity)
@@ -26,20 +29,7 @@ function createSquares(){
     return allDivs;
 };
 
-function addBlack (e){
-    this.classList.add ('black')
-};
-
-function hoverBlack (){allDivs.forEach (div => {
-    div.addEventListener("mouseover", addBlack)
-})};
-
-
 let divAdded = createSquares();
-
-function reset (){
-    allDivs.forEach (div =>{div.classList.remove ('black')})
-};
 
 function deleteSquares(){
     allDivs.forEach(div => { 
@@ -47,16 +37,41 @@ function deleteSquares(){
     });
 };
 
+
+function random (){
+    for (i=0; i<60; i++){
+    let randomNumber = Math.floor (Math.random () * 6);
+    classDefault = classStyles [randomNumber];} 
+    return classDefault
+}
+
+
+function addColor (e){
+    this.classList.add (`${classDefault}`)
+};
+
+function hoverBlack (){allDivs.forEach (div => {
+    div.addEventListener("mouseover", addColor)
+})};
+
+
+function reset (){
+    allDivs.forEach (div =>{div.classList.remove ('black')})
+};
+
 function resetButtonClick (){
     resetButton.addEventListener ('click', ()=>{
         allDivs.forEach (div =>{
-            div.classList.remove ('black')}
+            div.classList.remove (`${classDefault}`)}
             )}
     )
 }
 
 
-function buttonClicked (){
+
+
+
+function buttonSizeClicked (){
     size8.addEventListener('click', ()=>{
         deleteSquares();
         quantity = 'Eight'
@@ -93,7 +108,7 @@ function buttonClicked (){
 
 
 
-buttonClicked();
+buttonSizeClicked();
 hoverBlack();
 resetButtonClick();
 
